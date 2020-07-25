@@ -3,8 +3,18 @@ body {
 }
 
 .navbar {
+    background: rgb(255, 255, 255);
+    color: #008ed6;
     border-bottom: #008ed6 3px solid;
     opacity: 0.8;
+}
+
+#navbar-logo {
+    width: 40%;
+}
+
+#main-footer {
+    border-top: #008ed6 3px solid;
 }
 
 .carousel .carousel-item {
@@ -34,7 +44,7 @@ body {
 }
 
 #create-section {
-    background: #0d8f34;
+    background: #92886b;
 }
 
 #share-head-section {
@@ -43,4 +53,29 @@ body {
 
 #share-section {
     background: #333333;
+}
+
+/* Services Page */
+
+#services-page {
+    background-color: white;
+}
+
+#services-top {
+    background: url(../images/casual-close-up-clothes-250290.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 250px;
+    padding-top: 150px;
+    width: 100%;
+    color: white;
+}
+
+#services-body .fas,
+#share-section .fas {
+    background: rgb(58, 106, 200);
+    color: white;
+    /* padding: 5px; */
+    border-radius: 5px;
 }

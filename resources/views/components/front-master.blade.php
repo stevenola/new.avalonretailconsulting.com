@@ -24,9 +24,13 @@
 
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> --}}
+    <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><h2>Avalon Retail Consulting, Inc.</h2></a>
+      {{-- <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><h2>Avalon Retail Consulting, Inc.</h2></a> --}}
+
+      <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><img class="img-fluid"  id="navbar-logo" src="images/avalon_logo-01-1.jpg" alt="Avalon Retail Consulting"></a>
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -82,11 +86,25 @@
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 
+
+
+{{-- Footer --}}
+<footer id="main-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center py-4">
+        <p>Avalon Retail Consulting, Inc.  All Rights Reserved  Copyright &copy;
+          <span id="year"></span></p>
+        <button id="footerbtn" class="btn" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
 {{-- Get current year for copyright --}}
 <script>
-$('#year').text(new Date().getFullYear());
-</script>
-
+  $('#year').text(new Date().getFullYear());
+  </script>
 </body>
 
 </html>

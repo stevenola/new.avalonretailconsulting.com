@@ -4,7 +4,7 @@
 @section('content')
 {{-- SLIDER --}}
 
-<div id="slider1" class="carousel slide mb-5" data-ride="carousel">
+<div id="slider1" class="carousel slide mb-1 mt-2" data-ride="carousel">
 
 <ol class="carousel-indicators">
 <li class="active" data-target="#slider1" data-slide-to="0"></li>
@@ -73,14 +73,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <img src="img/cash-collection-currency-47344.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+        <img src="images/cash-collection-currency-47344.jpg" alt="" class="img-fluid mb-3 rounded-circle">
       </div>
       <div class="col-md-6">
-        <h3>Plan profit and cash flow growth</h3>
+        <h2>Plan profit and cash flow growth</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis reprehenderit exercitationem repellat, esse libero qui.</p>
         <div class="d-flex">
           <div class="p-4 align-self-start">
-            <i class="fas fa-check fa-2x"></i>
+            <i class="fas fa-check fa-3x"></i>
           </div>
           <div class="p-4 align-self-end">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, debitis.
@@ -88,7 +88,7 @@
         </div>
         <div class="d-flex">
           <div class="p-4 align-self-start">
-            <i class="fas fa-check fa-2x"></i>
+            <i class="fas fa-check fa-3x"></i>
           </div>
           <div class="p-4 align-self-end">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, debitis.
@@ -117,14 +117,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 order-2">
-          <img src="img/cabinet-clothes-clothes-hanger-996329.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+          <img src="images/cabinet-clothes-clothes-hanger-996329.jpg" alt="" class="img-fluid mb-3 rounded-circle">
         </div>
         <div class="col-md-6 order-1">
           <h3>Grow your sales with precise size scales</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis reprehenderit exercitationem repellat, esse libero qui.</p>
           <div class="d-flex">
             <div class="p-4 align-self-start">
-              <i class="fas fa-check fa-2x"></i>
+              <i class="fas fa-check fa-3x"></i>
             </div>
             <div class="p-4 align-self-end">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, debitis.
@@ -132,7 +132,7 @@
           </div>
           <div class="d-flex">
             <div class="p-4 align-self-start">
-              <i class="fas fa-check fa-2x"></i>
+              <i class="fas fa-check fa-3x"></i>
             </div>
             <div class="p-4 align-self-end">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, debitis.
@@ -159,14 +159,14 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <img src="img/agenda-black-calendar-273011.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+          <img src="images/agenda-black-calendar-273011.jpg" alt="" class="img-fluid mb-3 rounded-circle">
         </div>
         <div class="col-md-6">
           <h3>Plan profit and cash flow growth</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis reprehenderit exercitationem repellat, esse libero qui.</p>
           <div class="d-flex">
             <div class="p-4 align-self-start">
-              <i class="fas fa-check fa-2x"></i>
+              <i class="fas fa-check fa-3x"></i>
             </div>
             <div class="p-4 align-self-end">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, debitis.
@@ -174,7 +174,7 @@
           </div>
           <div class="d-flex">
             <div class="p-4 align-self-start">
-              <i class="fas fa-check fa-2x"></i>
+              <i class="fas fa-check fa-3x"></i>
             </div>
             <div class="p-4 align-self-end">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, debitis.
