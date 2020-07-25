@@ -1,0 +1,46 @@
+body {
+    padding-top: 70px;
+}
+
+.navbar {
+    border-bottom: #008ed6 3px solid;
+    opacity: 0.8;
+}
+
+.carousel .carousel-item {
+    height: 500px;
+}
+
+.dark-overlay {
+    /* display: block; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 500px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#explore-head-section {
+    background: rgb(124, 156, 210);
+}
+
+#explore-section .fas,
+#share-section .fas {
+    background: rgb(58, 106, 200);
+    color: white;
+    /* padding: 5px; */
+    border-radius: 5px;
+}
+
+#create-section {
+    background: #0d8f34;
+}
+
+#share-head-section {
+    background: rgb(124, 156, 210);
+}
+
+#share-section {
+    background: #333333;
+}
