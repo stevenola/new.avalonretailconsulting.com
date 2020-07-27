@@ -11,32 +11,34 @@
   <!-- Bootstrap core CSS -->
 <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-{{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"> --}}
 
-  <!-- Custom styles for this template -->
-{{-- <link href="{{asset('css/blog-post.css')}}" rel="stylesheet"> --}}
 <link href="{{asset('css/style.css')}}" rel="stylesheet">
 <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
 </head>
 
-<body class="bg-light text-dark" >
 
+  <body>
 
   <!-- Navigation -->
-  {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> --}}
-    <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      {{-- <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><h2>Avalon Retail Consulting, Inc.</h2></a> --}}
 
-      <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><img class="img-fluid"  id="navbar-logo" src="images/avalon_logo-01-1.jpg" alt="Avalon Retail Consulting"></a>
+          <nav class="navbar navbar-expand-sm fixed-top navbar-light">
+          <div class="container">
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
- 
+            {{-- <a href="#" class="navbar-brand">LoopLAB</a> --}}
+            <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><img class="img-fluid"  id="navbar-logo" src="images/arc logo 072520.jpg" alt="Avalon Retail Consulting"></a>
+            <button
+              class="navbar-toggler"
+              data-toggle="collapse"
+              type="button"
+              data-target="#navbarCollapse"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav sm-auto">
+
+
           <li class="nav-item">
             <a class="nav-link" href="about">About</a>
           </li>
@@ -78,16 +80,6 @@
  @yield('content')
 
 
-
-
-  <!-- Bootstrap core JavaScript -->
-<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
-
-
-
 {{-- Footer --}}
 <footer id="main-footer">
   <div class="container">
@@ -100,6 +92,12 @@
     </div>
   </div>
 </footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 {{-- Get current year for copyright --}}
 <script>

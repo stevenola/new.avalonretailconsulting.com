@@ -2,10 +2,10 @@
 
 
   @section('content')
-      
-  
+
   
          <!-- Title -->
+         
          <h1 class="mt-4">Post Title</h1>
   
          <!-- Author -->
@@ -93,7 +93,7 @@
   
            </div>
          </div>
-  
+       
   @endsection
   
   </x-post-master>

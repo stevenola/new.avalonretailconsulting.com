@@ -2,7 +2,8 @@
 
 
   @section('content')
-<section class="mt-2" id="services-page">
+  
+<section class="mt-4" id="services-page">
   <header id="services-top">
     {{-- <div class="dark-overlay"> --}}
       <div class="blog-home-inner container">

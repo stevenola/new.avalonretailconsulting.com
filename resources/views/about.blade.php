@@ -2,7 +2,7 @@
 
 
   @section('content')
-  <section class="mt-2" id="explore-head-section">
+  <section class="mt-4" id="explore-head-section">
     <div class="container">
       <div class="row">
         <div class="col text-center py-5">

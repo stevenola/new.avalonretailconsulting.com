@@ -1,16 +1,20 @@
 body {
-    padding-top: 70px;
+    padding-top: 55px;
 }
 
 .navbar {
     background: rgb(255, 255, 255);
     color: #008ed6;
-    border-bottom: #008ed6 3px solid;
+    /* border-bottom: #008ed6 3px solid; */
     opacity: 0.8;
 }
 
+.navbar-toggler-icon {
+    background-color: royalblue;
+}
+
 #navbar-logo {
-    width: 40%;
+    width: 60%;
 }
 
 #main-footer {
@@ -19,6 +23,7 @@ body {
 
 .carousel .carousel-item {
     height: 500px;
+    border-top: #008ed6 3px solid;
 }
 
 .dark-overlay {
@@ -70,6 +75,11 @@ body {
     padding-top: 150px;
     width: 100%;
     color: white;
+    border-top: #008ed6 3px solid;
+}
+
+#services-page {
+    background-color: white;
 }
 
 #services-body .fas,
@@ -78,4 +88,24 @@ body {
     color: white;
     /* padding: 5px; */
     border-radius: 5px;
+}
+
+#blog-top {
+    background: url(../images/casual-close-up-clothes-250290.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 250px;
+    padding-top: 150px;
+    width: 100%;
+    color: white;
+}
+
+#blog-page {
+    border-top: #008ed6 3px solid;
+}
+
+#team-header {
+    background: rgb(124, 156, 210);
+    color: white;
 }

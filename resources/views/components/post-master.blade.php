@@ -3,19 +3,20 @@
 
 <head>
 
+
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <title>Avalon New Website</title>
+  <title>Avalon Retail Consulting</title>
 
   <!-- Bootstrap core CSS -->
 <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+<link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
 
-  <!-- Custom styles for this template -->
-<link href="{{asset('css/blog-post.css')}}" rel="stylesheet">
+<link href="{{asset('css/style.css')}}" rel="stylesheet">
 <link rel="stylesheet" href="{{asset('css/app.css')}}">
+
 
 </head>
 
@@ -23,78 +24,78 @@
 
   <!-- Navigation -->
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+  <nav class="navbar navbar-expand-sm fixed-top navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><h2>Avalon Retail Consulting</h2></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+
+      {{-- <a href="#" class="navbar-brand">LoopLAB</a> --}}
+      <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><img class="img-fluid"  id="navbar-logo" src="images/arc logo 072520.jpg" alt="Avalon Retail Consulting"></a>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        type="button"
+        data-target="#navbarCollapse"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
- 
-          <li class="nav-item">
-            <a class="nav-link" href="about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="posts">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="team">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact">Contact</a>
-          </li>
-@if(Auth::check())
-
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
-          </li>
-          <li>
-            <a class="nav-link" href="logoutnow">Logout</a>
-          </li>
-@else
-          <li class="nav-item">
-            <a class="nav-link" href="login">Login</a>
-          </li>
-@endif
-
-
-
-
-        </ul>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav sm-auto">
+   
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="posts">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+  @if(Auth::check())
+  
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
+            </li>
+            <li>
+              <a class="nav-link" href="logoutnow">Logout</a>
+            </li>
+  @else
+            <li class="nav-item">
+              <a class="nav-link" href="login">Login</a>
+            </li>
+  @endif
+  
+  
+  
+  
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  {{-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="/new.avalonretailconsulting.com/public">Avalon Retail Consulting</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> --}}
+  {{-- Banner     --}}
+  <section class="mt-4" id="blog-page">
+    <header id="blog-top">
+      {{-- <div class="dark-overlay"> --}}
+        <div class="blog-home-inner container">
+          <div class="row">
+            <div class="col-lg-12 d-none d-lg-block">
+              <h1>Our Blog</h1>
+           
+    
+            </div>
+    
+          </div>
+        </div>
+      {{-- </div> --}}
+    
+    </header>
+  </section>
 
   <!-- Page Content -->
   <div class="container">
@@ -176,15 +177,21 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
+  <footer id="main-footer">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      <div class="row">
+        <div class="col text-center py-4">
+          <p>Avalon Retail Consulting, Inc.  All Rights Reserved  Copyright &copy;
+            <span id="year"></span></p>
+          <button id="footerbtn" class="btn" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+        </div>
+      </div>
     </div>
-    <!-- /.container -->
   </footer>
 
   <!-- Bootstrap core JavaScript -->
 <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 </body>

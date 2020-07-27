@@ -4,7 +4,7 @@
 @section('content')
 {{-- SLIDER --}}
 
-<div id="slider1" class="carousel slide mb-1 mt-2" data-ride="carousel">
+<div id="slider1" class="carousel slide mb-1 mt-4" data-ride="carousel">
 
 <ol class="carousel-indicators">
 <li class="active" data-target="#slider1" data-slide-to="0"></li>
@@ -62,7 +62,7 @@
   <div class="container">
     <div class="row">
       <div class="col text-center py-5">
-        <h1 class="display-4">Profit Planning</h1>
+        <h1 class="display-4">Lorem ipsum</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio vel provident, pariatur labore animi sequi.</p>
         <a href="#" class="btn btn-outline-secondary">Find Out More</a>
       </div>
@@ -76,7 +76,7 @@
         <img src="images/cash-collection-currency-47344.jpg" alt="" class="img-fluid mb-3 rounded-circle">
       </div>
       <div class="col-md-6">
-        <h2>Plan profit and cash flow growth</h2>
+        <h2>Lorem ipsum</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis reprehenderit exercitationem repellat, esse libero qui.</p>
         <div class="d-flex">
           <div class="p-4 align-self-start">
@@ -104,7 +104,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-center py-5">
-          <h1 class="display-4">Size Scale Analyzer</h1>
+          <h1 class="display-4">Lorem ipsum</h1>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio vel provident, pariatur labore animi sequi.</p>
           <a href="blog.php" class="btn btn-outline-light">Try It Out</a>
         </div>
@@ -148,7 +148,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-center py-5">
-          <h1 class="display-4">Retail Reminder</h1>
+          <h1 class="display-4">Lorem ipsum</h1>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio vel provident, pariatur labore animi sequi.</p>
           <a href="#" class="btn btn-outline-secondary">Find Out More</a>
         </div>
