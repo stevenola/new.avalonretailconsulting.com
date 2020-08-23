@@ -26,16 +26,22 @@ body {
     border-top: #008ed6 3px solid;
 }
 
+.carousel-caption {
+    position: absolute;
+    top: 35%;
+    font-size: 20px;
+    color: darkblue !important;
+}
+
 .dark-overlay {
-    /* display: block; */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     min-height: 500px;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.7); */
+    background: rgba(255, 255, 255, 0.5);
 }
-
 #explore-head-section {
     background: rgb(124, 156, 210);
 }
@@ -74,8 +80,18 @@ body {
     min-height: 250px;
     padding-top: 150px;
     width: 100%;
-    color: white;
+    color: darkblue !important;
     border-top: #008ed6 3px solid;
+}
+
+#services-top .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 205px;
+    width: 100%;
+    min-height: 250px;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 #services-page {
@@ -98,14 +114,67 @@ body {
     min-height: 250px;
     padding-top: 150px;
     width: 100%;
-    color: white;
+    color: darkblue !important;
 }
 
 #blog-page {
     border-top: #008ed6 3px solid;
 }
 
-#team-header {
-    background: rgb(124, 156, 210);
-    color: white;
+#team-top {
+    background: url(../images/casual-close-up-clothes-250290.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 250px;
+    padding-top: 150px;
+    width: 100%;
+    color: darkblue !important;
+    border-top: #008ed6 3px solid;
+}
+
+#blog-top-overlay {
+    /* display: block; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 250px;
+    width: 100%;
+    min-height: 333px;
+
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#team-top-overlay {
+    /* display: block; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 205px;
+    width: 100%;
+    min-height: 250px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#contact-top {
+    background: url(../images/casual-close-up-clothes-250290.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 250px;
+    padding-top: 150px;
+    width: 100%;
+    color: darkblue !important;
+    border-top: #008ed6 3px solid;
+}
+
+#contact-top-overlay {
+    /* display: block; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 150px;
+    width: 100%;
+    min-height: 354px;
+    background: rgba(255, 255, 255, 0.5);
 }

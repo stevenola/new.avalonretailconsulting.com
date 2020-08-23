@@ -3,17 +3,26 @@
 
   @section('content')
 
-  <section class="mt-4" id="team-header">
-    <div class="container">
-      <div class="row">
-        <div class="col text-center py-5">
-    <h1>Our Specialists</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio vel provident, pariatur labore animi sequi.</p>
-  
-  </div>
-</div>
-</div>
-</section>
+  <section class="mt-4" id="services-page">
+    <header id="team-top">
+      <div id="team-top-overlay">
+        <div class="blog-home-inner container">
+          <div class="row">
+            <div class="col-lg-8 d-none d-lg-block">
+              <h1>Our Specialists</h1>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio vel provident, pariatur labore animi sequi.</p>
+    
+            </div>
+    
+          </div>
+        </div>
+      </div>
+    
+    </header>
+  </section>
+
+
+
   <section id="staff" class="py-5 ml-5 text-center">
 
     

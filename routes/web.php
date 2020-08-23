@@ -1,5 +1,6 @@
 <?php
 
+use App\Post;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,11 +21,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/admin', 'AdminsController@index')->name('admin.index');
-Route::get('/post', 'PostController@show')->name('post');
+
+Route::get('/post/{post}', 'PostController@show')->name('post');
 
 Route::get('/posts', function () {
-    return view('posts');
+
+    $posts = Post::all();
+    return view('posts', ['posts' => $posts]);
 });
 
 Route::get('/about', function () {
@@ -45,4 +48,18 @@ Route::get('/services', function () {
 Route::get('/logoutnow', function () {
     Auth::logout();
     return view('home');
+});
+
+// Route Middleware prevents accessing admin page unless logged in
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/admin', 'AdminsController@index')->name('admin.index');
+
+    Route::get('/admin/posts', 'PostController@index')->name('posts.index');
+    Route::get('/admin/posts/create', 'PostController@create')->name('post.create');
+    Route::post('/admin/posts', 'PostController@store')->name('post.store');
+    Route::get('/admin/posts/{post}/edit', 'PostController@edit')->name('post.edit');
+    Route::patch('/admin/posts/{post}/update', 'PostController@update')->name('post.update');
+    Route::delete('/admin/posts/{post}/destroy', 'PostController@destroy')->name('post.destroy');
 });

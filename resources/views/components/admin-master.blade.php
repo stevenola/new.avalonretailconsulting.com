@@ -29,27 +29,27 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><h2>Avalon Retail Consulting</h2></a>
+      <a class="navbar-brand" href="{{url('/')}}"><img class="img-fluid"  id="navbar-logo" src="{{asset('images/arc logo 072520.jpg')}}" alt="Avalon Retail Consulting"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
  
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a class="nav-link" href="about">About</a>
+          </li> --}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{url('services')}}">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services">Services</a>
+            <a class="nav-link" href="{{url('posts')}}">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="posts">Blog</a>
+            <a class="nav-link" href="{{url('team')}}">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="team">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact">Contact</a>
+            <a class="nav-link" href="{{url('contact')}}">Contact</a>
           </li>
 @if(Auth::check())
 
@@ -57,11 +57,11 @@
             <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
           </li>
           <li>
-            <a class="nav-link" href="logoutnow">Logout</a>
+            <a class="nav-link" href="{{url('logoutnow')}}">Logout</a>
           </li>
 @else
           <li class="nav-item">
-            <a class="nav-link" href="login">Login</a>
+            <a class="nav-link" href="{{url('login')}}">Login</a>
           </li>
 @endif
 
@@ -95,7 +95,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
+      <a class="nav-link" href="{{route('admin.index')}}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -109,19 +109,7 @@
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.html">Buttons</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
-          </div>
-        </div>
-      </li>
+<x-admin-sidebar-posts-links></x-admin-sidebar-posts-links>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
@@ -444,6 +432,7 @@
   <!-- Custom scripts for all pages-->
 <script src="{{asset('js/sb-admin-2.min.js')}}"></script>
 
+@yield('scripts')
 </body>
 
 </html>

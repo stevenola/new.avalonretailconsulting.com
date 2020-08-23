@@ -5,8 +5,8 @@
   
 
   <section class="mt-4 mb-4" id="services-page">
-    <header id="services-top">
-      {{-- <div class="dark-overlay"> --}}
+    <header id="contact-top">
+      <div id="contact-top-overlay"></div>
         <div class="blog-home-inner container">
           <div class="row">
             <div class="col-lg-8 d-none d-lg-block">
@@ -17,7 +17,7 @@
     
           </div>
         </div>
-      {{-- </div> --}}
+      </div>
     
     </header>
   </section>

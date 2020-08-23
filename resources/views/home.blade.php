@@ -10,34 +10,45 @@
 <li class="active" data-target="#slider1" data-slide-to="0"></li>
 <li data-target="#slider1" data-slide-to="1"></li>
 <li data-target="#slider1" data-slide-to="2"></li>
+<li data-target="#slider1" data-slide-to="3"></li>
 </ol>
 
 <div class="carousel-inner">
+  
 <div class="carousel-item active">
   <img src="images/IMG_1416.JPG" alt="Slide One" class = "d-block img-fluid" width = "100%" >
-  <div class="dark-overlay"></div>
+  <div class="dark-overlay">
   <div class="carousel-caption d-none d-md-block">
-    
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi ipsam debitis.</p>
-    <h3>Slide One</h3>
+    <h1>Profitable Sales Growth</h1>
+    <p>Testimonial: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi ipsam debitis.</p>
+  </div> 
   </div>
 </div>
 <div class="carousel-item">
   <img src="images/IMG_1425.JPG" alt="Slide Two" class = "d-block img-fluid" width = "100%" >
-  <div class="dark-overlay"></div>
+  <div class="dark-overlay">
   <div class="carousel-caption d-none d-md-block">
-   
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi ipsam debitis.</p>
-    <h3>Slide Two</h3>
+    <h1>Optimized Inventory Levels</h1>
+    <p>Testimonial: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi ipsam debitis.</p>
+  </div>
   </div>
 </div>
 <div class="carousel-item">
   <img src="images/IMG_1433.JPG" alt="Slide Three" class = "d-block img-fluid" width = "100%" >
   <div class="dark-overlay"></div>
   <div class="carousel-caption d-none d-md-block">
-   
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi ipsam debitis.</p>
-    <h3>Slide Three</h3>
+    <h1>Increased Customer Outreach</h1>
+    <p>Testimonial: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi ipsam debitis.</p>
+    
+  </div>
+</div>
+<div class="carousel-item">
+  <img src="images/IMG_1425.JPG" alt="Slide Four" class = "d-block img-fluid" width = "100%" >
+  <div class="dark-overlay"></div>
+  <div class="carousel-caption d-none d-md-block">
+    <h1>In Depth Finanacial Management</h1>
+    <p>Testimonial: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam eligendi ipsam debitis.</p>
+    
   </div>
 </div>
 
@@ -148,7 +159,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-center py-5">
-          <h1 class="display-4">Lorem ipsum</h1>
+          <h1 class="display-4">ABOUT US</h1>
           <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio vel provident, pariatur labore animi sequi.</p>
           <a href="#" class="btn btn-outline-secondary">Find Out More</a>
         </div>

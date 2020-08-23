@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,8 +30,10 @@
   <nav class="navbar navbar-expand-sm fixed-top navbar-light">
     <div class="container">
 
-      {{-- <a href="#" class="navbar-brand">LoopLAB</a> --}}
-      <a class="navbar-brand" href="/new.avalonretailconsulting.com/public"><img class="img-fluid"  id="navbar-logo" src="images/arc logo 072520.jpg" alt="Avalon Retail Consulting"></a>
+    
+      <a class="navbar-brand" href="{{url('/')}}"><img class="img-fluid"  id="navbar-logo" src="{{asset('images/arc logo 072520.jpg')}}" alt="Avalon Retail Consulting"></a>
+  
+
       <button
         class="navbar-toggler"
         data-toggle="collapse"
@@ -41,20 +45,19 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav sm-auto">
    
+        
             <li class="nav-item">
-              <a class="nav-link" href="about">About</a>
+            
+              <a class="nav-link" href="{{url('services')}}">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services">Services</a>
+              <a class="nav-link" href="{{url('posts')}}">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="posts">Blog</a>
+              <a class="nav-link" href="{{url('team')}}">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="team">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact">Contact</a>
+              <a class="nav-link" href="{{url('contact')}}">Contact</a>
             </li>
   @if(Auth::check())
   
@@ -62,11 +65,11 @@
               <a class="nav-link" href="{{route('admin.index')}}">Admin</a>
             </li>
             <li>
-              <a class="nav-link" href="logoutnow">Logout</a>
+              <a class="nav-link" href="{{url('logoutnow')}}">Logout</a>
             </li>
   @else
             <li class="nav-item">
-              <a class="nav-link" href="login">Login</a>
+              <a class="nav-link" href="{{url('login')}}">Login</a>
             </li>
   @endif
   
@@ -81,6 +84,7 @@
   {{-- Banner     --}}
   <section class="mt-4" id="blog-page">
     <header id="blog-top">
+      <div id="blog-top-overlay">
       {{-- <div class="dark-overlay"> --}}
         <div class="blog-home-inner container">
           <div class="row">
@@ -93,7 +97,7 @@
           </div>
         </div>
       {{-- </div> --}}
-    
+    </div>
     </header>
   </section>
 
