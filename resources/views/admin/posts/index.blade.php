@@ -15,9 +15,6 @@
 
 
     <div class="card shadow mb-4">
-      <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-      </div>
       <div class="card-body">
         <div class="table-responsive">
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -33,17 +30,7 @@
                 
               </tr>
             </thead>
-            <tfoot>
-              <tr>
-                <th>Id</th>
-                <th>Owner</th>
-                <th>Title</th>
-                <th>Image</th>
-                <th>Created At</th>
-                <th>Updated At</th>
-                <th>Delete</th>
-              </tr>
-            </tfoot>
+      
             <tbody>
               @foreach ($posts as $post)
                   
@@ -71,9 +58,9 @@
       </div>
     </div>
 {{-- create page links --}}
-    <div class="col-12 d-flex justify-content-center">
+    {{-- <div class="col-12 d-flex justify-content-center">
       {{$posts->links()}}
-    </div>
+    </div> --}}
 @endsection
 @section('scripts')
     
@@ -83,7 +70,7 @@
 
   <!-- Page level custom scripts -->
   {{-- code for plugin pagination --}}
-  {{-- <script src="{{asset('js/demo/datatables-demo.js')}}"></script> --}}
+  <script src="{{asset('js/demo/datatables-demo.js')}}"></script>
 @endsection
 
 </x-admin-master>

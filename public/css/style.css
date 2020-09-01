@@ -178,3 +178,8 @@ body {
     min-height: 354px;
     background: rgba(255, 255, 255, 0.5);
 }
+
+#avatar-image {
+    max-width: 10%;
+    height: auto;
+}

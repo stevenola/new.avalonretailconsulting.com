@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-// use Illuminate\Contracts\Session\Session;
+use App\User;
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Event\ViewEvent;
 use Illuminate\Support\Facades\Session;
@@ -13,10 +15,13 @@ class PostController extends Controller
     //
     public function index()
     {
-        // $posts = Post::all();
-        // Only shows posts of the logged in user:
-        $posts = auth()->user()->posts()->paginate(5);
 
+        if (auth()->user()->userHasRole('Admin')) {
+            $posts = Post::all();
+        } else {
+            // Only shows posts of the logged in user:
+            $posts = auth()->user()->posts()->get();
+        }
 
         return view('admin.posts.index', ['posts' => $posts]);
     }
@@ -30,13 +35,16 @@ class PostController extends Controller
 
     public function create()
     {
+
         $this->authorize('create', Post::class);
         return view('admin.posts.create');
     }
 
     public function store()
     {
+
         $this->authorize('create', Post::class);
+
         $inputs = request()->validate([
             'title' => 'required | min:8 | max:255',
             'post_image' => 'file',
@@ -48,6 +56,7 @@ class PostController extends Controller
         }
 
         auth()->user()->posts()->create($inputs);
+
 
         session()->flash('post-created-message', $inputs['title'] . " " . 'post was created');
         return redirect()->route('posts.index');
@@ -63,8 +72,12 @@ class PostController extends Controller
 
     public function destroy(Post $post)
     {
+        // if (auth()->user()->userHasRole('Admin')) {
+        //     $post->delete();
+        // } else {
         $this->authorize('delete', $post);
         $post->delete();
+        // }
         // Shows message when post was deleted - NOTE: make sure Session is imported at top: Use...  Also see code at top of index.blade.php
         Session::flash('message', 'Post was deleted');
 
