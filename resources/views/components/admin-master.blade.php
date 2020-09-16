@@ -117,6 +117,8 @@
 <x-admin-sidebar-users-links></x-admin-sidebar-users-links>
 
 <x-admin-sidebar-roles-links></x-admin-sidebar-roles-links>
+
+<x-admin-sidebar-permissions-links></x-admin-sidebar-roles-links>
 @endif
 
       <!-- Nav Item - Utilities Collapse Menu -->

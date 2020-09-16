@@ -2,6 +2,16 @@
 @section('content')
     <h1>All Posts</h1>
 
+<div class="row">
+<form class="form-inline" type="get" action="{{url('/admin/posts/search')}}">
+  @csrf
+  <input type="search" name="query" id="search" class="form-control" aria-describedby="" placeholder="Search Blog Title">
+  <button class="btn btn-success" type="submit">Search</button>
+
+</form>
+
+</div>
+
 
 {{-- session is a Helper Function for Session class --}}
 @if (session('message'))

@@ -3,20 +3,20 @@
   @section('content')
      
   <div class="pt-5">
-  <h1>Roles</h1>
+  <h1>Permissions</h1>
   </div>
 <div class="col-sm-9">
          {{-- This if statement works with code below to create updated msg --}}
-         @if (session('role-created'))
-         <div class="alert alert-success"> {{session('role-created')}}</div>
+         @if (session('permission-created'))
+         <div class="alert alert-success"> {{session('permission-created')}}</div>
       @endif
       {{-- This if statement works with code below to create deleted msg --}}
-      @if (session('role-deleted'))
-         <div class="alert alert-danger"> {{session('role-deleted')}}</div>
+      @if (session('permission-deleted'))
+         <div class="alert alert-danger"> {{session('permission-deleted')}}</div>
       @endif
        {{-- This if statement works with code below to create updated msg --}}
-       @if (session('role-updated'))
-       <div class="alert alert-success"> {{session('role-updated')}}</div>
+       @if (session('permission-updated'))
+       <div class="alert alert-success"> {{session('permission-updated')}}</div>
     @endif
   
       <div class="card shadow mb-4">
@@ -34,16 +34,16 @@
               </thead>
    
               <tbody>
-                @foreach ($roles as $role)
+                @foreach ($permissions as $permission)
     
                 <tr>
                 
-                <td>{{$role->id}}</td>
-                <td><a href="{{route('role.edit', $role->id)}}">{{$role->name}}</a></td>              
-                
-                  <td>{{$role->slug}}</td>
+                <td>{{$permission->id}}</td>
+                <td><a href="{{route('permission.edit', $permission->id)}}">{{$permission->name}}</a></td>              
+                {{-- <td>{{$permission->name}}</td> --}}
+                  <td>{{$permission->slug}}</td>
                   <td>
-                <form method="post" action="{{route('role.destroy', $role->id)}}">
+                <form method="post" action="{{route('permission.destroy', $permission->id)}}">
                 @csrf
                 @method('DELETE')
   

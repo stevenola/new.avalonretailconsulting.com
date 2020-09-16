@@ -31,6 +31,8 @@ Route::get('/posts', function () {
     return view('posts', ['posts' => $posts]);
 });
 
+
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -65,29 +67,43 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/posts/{post}/edit', 'PostController@edit')->name('post.edit');
     Route::patch('/admin/posts/{post}/update', 'PostController@update')->name('post.update');
     Route::delete('/admin/posts/{post}/destroy', 'PostController@destroy')->name('post.destroy');
+    Route::get('/admin/posts/search', 'PostController@search');
 
     // User routes
     Route::put('/admin/users/{user}/update', 'UserController@update')->name('user.profile.update');
     Route::delete('/admin/users/{user}/destroy', 'UserController@destroy')->name('user.destroy');
 });
 
-Route::middleware('role:Admin')->group(function () {
+// Route::middleware('role:Admin')->group(function () {
+Route::middleware('role:Admin', 'auth')->group(function () {
     Route::get('/admin/users', 'UserController@index')->name('users.index');
     Route::put('/admin/users/{user}/attach', 'UserController@attach')->name('user.role.attach');
     Route::put('/admin/users/{user}/detach', 'UserController@detach')->name('user.role.detach');
 });
 
-Route::middleware(['can:view,user'])->group(function () {
+// Route::middleware(['can:view,user'])->group(function () {
+Route::middleware(['can:view,user', 'auth'])->group(function () {
     Route::get('/admin/users/{user}/profile', 'UserController@show')->name('user.profile.show');
 });
 
-// Role routes
-Route::middleware('role:Admin')->group(function () {
-    // Route::get('/admin/roles', 'RoleController@index')->name('roles.index');
+
+Route::middleware('role:Admin', 'auth')->group(function () {
+    // Route::middleware('role:Admin')->group(function () {
+    // Role routes
     Route::get('/admin/roles', 'RoleController@index')->name('roles.index');
     Route::delete('/admin/roles/{role}/destroy', 'RoleController@destroy')->name('role.destroy');
     Route::get('/admin/roles/create', 'RoleController@create')->name('role.create');
     Route::post('/admin/roles', 'RoleController@store')->name('role.store');
     Route::get('/admin/roles/{role}/edit', 'RoleController@edit')->name('role.edit');
     Route::put('/admin/roles/{role}/update', 'RoleController@update')->name('role.update');
+    Route::put('/admin/roles/{role}/attach', 'RoleController@attach')->name('role.permission.attach');
+    Route::put('/admin/roles/{role}/detach', 'RoleController@detach')->name('role.permission.detach');
+
+    // Permission routes
+    Route::get('/admin/permissions', 'PermissionController@index')->name('permissions.index');
+    Route::get('/admin/permissions/create', 'PermissionController@create')->name('permission.create');
+    Route::post('/admin/permissions', 'PermissionController@store')->name('permission.store');
+    Route::get('/admin/permissions/{permission}/edit', 'PermissionController@edit')->name('permission.edit');
+    Route::put('/admin/permissions/{permission}/update', 'PermissionController@update')->name('permission.update');
+    Route::delete('/admin/permissions/{permission}/destroy', 'PermissionController@destroy')->name('permission.destroy');
 });

@@ -107,4 +107,12 @@ class PostController extends Controller
         session()->flash('post-updated-message', $inputs['title'] . " " . 'post was updated');
         return redirect()->route('posts.index');
     }
+
+    public function search()
+    {
+        $search_text = $_GET['query'];
+
+        $posts = Post::where('title', 'LIKE', '%' . $search_text . '%')->get();
+        return view('admin.posts.search', compact('posts'));
+    }
 }

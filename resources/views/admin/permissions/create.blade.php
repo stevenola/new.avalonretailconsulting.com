@@ -1,9 +1,9 @@
 <x-admin-master>
   @section('content')
   
-  <h1>Create Role</h1>
+  <h1>Create Permission</h1>
   <div class="col-sm-6">
-  <form method="post" action="{{route('role.store')}}" enctype="multipart/form-data">
+  <form method="post" action="{{route('permission.store')}}" enctype="multipart/form-data">
     @csrf
   <div class="form-group">
   <label for="title">Name</label>
@@ -16,10 +16,7 @@
     @enderror  
     </div>  
   </div>
-  {{-- <div class="form-group">
-    <label for="title">Slug</label>
-    <input type="text" name="slug" id="slug" class="form-control" aria-describedby="" placeholder="Enter Slug">
-    </div> --}}
+
   
   <button type="submit" class="btn btn-primary">Submit</button>
   
