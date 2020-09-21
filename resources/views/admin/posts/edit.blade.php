@@ -11,6 +11,28 @@
   <label for="title">Title</label>
   <input type="text" name="title" id="title" class="form-control" aria-describedby="" placeholder="Enter Title" value="{{$post->title}}">
   </div>
+
+  <div class="form-group">
+    <label for="category_id">Category</label>
+    <select type="text" name="category_id" id="category_id" class="form-control 
+  @error('category_id') is-invalid @enderror" aria-describedby="" placeholder="" >
+
+  @foreach ($categories as $category)
+ 
+  <option value="{{$category->id}}" {{$post->category_id == $category->id ? 'selected' : ''  }}>{{$category->name}}</option>
+
+       @endforeach
+
+      </select>
+    
+    {{-- creates error message --}}
+        @error('category_id')
+        <span><strong class="text-danger">{{$message}}</strong></span>    
+        @enderror  
+      
+        </div> 
+
+
   
   <div class="form-group">
   <div><img height="100px" src="{{$post->post_image}}" alt=""></div>

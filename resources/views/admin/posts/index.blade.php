@@ -2,7 +2,7 @@
 @section('content')
     <h1>All Posts</h1>
 
-<div class="row">
+{{-- <div class="row"> --}}
 <form class="form-inline" type="get" action="{{url('/admin/posts/search')}}">
   @csrf
   <input type="search" name="query" id="search" class="form-control" aria-describedby="" placeholder="Search Blog Title">
@@ -10,7 +10,7 @@
 
 </form>
 
-</div>
+{{-- </div> --}}
 
 
 {{-- session is a Helper Function for Session class --}}
@@ -32,6 +32,7 @@
               <tr>
                 <th>Id</th>
                 <th>Owner</th>
+                <th>Category</th>
                 <th>Title</th>
                 <th>Image</th>
                 <th>Created At</th>
@@ -49,6 +50,7 @@
               
               <td>{{$post->id}}</td>
               <td>{{$post->user->name}}</td>
+              <td>{{$post->category->name}}</td>
               <td><a href="{{route('post.edit', $post->id)}}">{{$post->title}}</a></td>
               <td><img height="40px" src="{{$post->post_image}}" alt=""></td>
               <td>{{$post->created_at->diffForHumans()}}</td>
